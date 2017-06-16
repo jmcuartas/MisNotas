@@ -1,0 +1,19 @@
+<ion-view view-title="Mis Notas">
+    
+    <ion-content ng-controller="NotesController">
+        <ion-list>
+            <ion-item class="item-remove-animate item-icon-right"  ui-sref="app.notes-edit({id:note.id})" ng-repeat="note in vm.notes">
+            <i class="icon ion-ios-arrow-right"></i>
+                <h2>{{note.title}}</h2>
+                <p>{{note.description}}</p>
+
+                <ion-option-button class="button-assertive icon-left ion-trash-b" ng-click="vm.remove(note.id)">Eliminar</ion-option-button>
+            </ion-item>
+        </ion-list>
+      </ion-content>
+
+      <ion-footer-bar class="bar-asertive">
+        <a class="button button-positive icon-left ion-compose" ui-sref="app.notes-create"> Agregar</a>
+      </ion-footer-bar>
+      
+</ion-view>
