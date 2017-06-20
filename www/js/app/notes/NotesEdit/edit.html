@@ -1,5 +1,5 @@
 <div>
-    <ion-view view-title="Nota">
+    <ion-view view-title="{{ 'note.create.title' | translate}}">
         <ion-content>        
             <div class="list card">
                 <div class="item-input">
@@ -11,7 +11,7 @@
             </div>
             <div class="list card">
                 <div class="padding">
-                    <button class="button button-block button-positive" ng-click="vm.save()">Guardar</button>
+                    <button class="button button-block button-positive" ng-click="vm.save()">{{ 'note.create.save' | translate}}</button>
                 </div>
             </div>
         </ion-content>

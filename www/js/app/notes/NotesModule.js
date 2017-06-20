@@ -5,6 +5,7 @@ angular
 
             .state('app.notes', {
                 url: '/notes',
+                cache: false,
                 views: {
                     'content': {
                         templateUrl: 'js/app/notes/Notes/notes.html',
@@ -16,6 +17,7 @@ angular
 
             .state('app.notes-edit', {
                 url: '/notes-edit/:id',
+                cache: false,
                 views: {
                     'content': {
                         templateUrl: 'js/app/notes/NotesEdit/edit.html',
@@ -27,6 +29,7 @@ angular
 
             .state('app.notes-create', {
                 url: '/notes-create',
+                cache: false,
                 views: {
                     'content': {
                         templateUrl: 'js/app/notes/NotesCreate/create.html',

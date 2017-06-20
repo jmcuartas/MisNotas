@@ -1,0 +1,17 @@
+<ion-view view-title="{{ 'menu.settings' | translate }}">
+    <ion-content>
+        <ion-list>
+            <ion-item>
+                <label class="item item-input item-select">
+                    <div class="input-label">
+                        {{ 'setting.header' | translate }}
+                    </div>                
+                    <select ng-model="language" ng-change="vm.showSelectedValue(language)">
+                        <option value="es">{{ 'setting.spanish' | translate }}</option>
+                        <option value="en">{{ 'setting.english' | translate }}</option>
+                    </select>
+                </label>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

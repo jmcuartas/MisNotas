@@ -1,0 +1,18 @@
+{
+    "menu.header":"Menu",
+    "menu.notes":"Notes",
+    "menu.settings":"Settings",
+    "menu.about":"About",
+    "setting.header":"Language",
+    "setting.spanish":"Spanish",
+    "setting.english":"English",
+    "about.title":"My Notes",
+    "about.text":"This App permits create, store and modify your notes.",
+    "notes.title":"My Notes",
+    "notes.delete":"Remove",
+    "notes.create":"Create",
+    "note.create.title":"Note",
+    "note.create.save":"Save",
+    "note.create.placeTitle":"Title",
+    "note.create.placeDesc":"Description"
+}

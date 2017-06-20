@@ -1,0 +1,18 @@
+{
+    "menu.header":"Menu",
+    "menu.notes":"Notas",
+    "menu.settings":"Configuracion",
+    "menu.about":"Sobre",
+    "setting.header":"Idioma",
+    "setting.spanish":"Español",
+    "setting.english":"Ingles",
+    "about.title":"Mis Notas",
+    "about.text":"Esta App te permite crear, almacenar y modificar tus notas.",
+    "notes.title":"Mis Notas",
+    "notes.delete":"Eliminar",
+    "notes.create":"Crear",
+    "note.create.title":"Nota",
+    "note.create.save":"Guardar",
+    "note.create.placeTitle":"Titulo",
+    "note.create.placeDesc":"Descripcion"
+}
