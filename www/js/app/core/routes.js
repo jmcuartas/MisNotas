@@ -1,12 +1,18 @@
-angular
-    .module('starter')
-    .config(function($stateProvider, $urlRouterProvider){
-    $stateProvider
+(function(){
+    'use strict';
+
+    var core = angular.module('app.core');
+
+    core.config(config);
+
+    /* @ngInject */
+    function config($stateProvider, $urlRouterProvider){
+        $stateProvider
       
       .state('app', {
         url: '/app',
         abstract: true,
-        templateUrl: 'js/app/menu/menu.html'
+        templateUrl: 'js/app/features/menu/menu.html'
       })
 
       .state('app.settings', {
@@ -14,7 +20,7 @@ angular
         cache: false,
         views: {
           'content' : {
-            templateUrl: 'js/app/settings/settings.html',
+            templateUrl: 'js/app/features/settings/settings.html',
             controller: 'settingsController',
             controllerAs: 'vm'
           }
@@ -26,10 +32,11 @@ angular
         cache: false,
         views: {
           'content' : {
-            templateUrl: 'js/app/about/about.html'
+            templateUrl: 'js/app/features/about/about.html'
           }
         }
       })
 
     $urlRouterProvider.otherwise('/app/notes');
-  });
+    }
+})();

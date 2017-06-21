@@ -1,0 +1,17 @@
+<ion-view view-title="{{ 'note.create.title' | translate}}">
+    <ion-content>        
+        <div class="list card">
+            <div class="item-input">
+                <input type="text" ng-model="vm.nota.title" placeholder="Titulo">
+            </div>
+            <div class="item-input">
+                <textarea ng-model="vm.nota.description"></textarea>
+            </div>
+        </div>
+        <div class="list card">
+            <div class="padding">
+                <button class="button button-block button-positive" ng-click="vm.save()">{{ 'note.create.save' | translate}}</button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

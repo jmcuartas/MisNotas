@@ -1,8 +1,11 @@
-angular
-    .module('NotesModule')
-    .controller('NotesCreateController', NotesCreateController);
+(function(){
+    'use strict';
 
-    function NotesCreateController($scope, $state, noteservice){
+    angular
+        .module('app.notes')
+        .controller('NotesCreateController', NotesCreateController);
+
+    function NotesCreateController($scope, $state, notesService){
         var vm = this;
 
         activate();
@@ -14,7 +17,9 @@ angular
         }
         
         function save(){
-            noteservice.create(vm.nota);
+            notesService.create(vm.nota);
             $state.go('app.notes');
         }
     };
+})();
+

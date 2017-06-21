@@ -1,16 +1,23 @@
-angular
-    .module('settingsModule', ['pascalprecht.translate'])
-    .config(function($translateProvider){
+(function (){
+    'use strict';
+
+    var settings = angular.module('app.settings', []);
+
+    settings.config(config);    
+    settings.controller('settingsController', settingsController);
+
+    /* @ngInject */
+    function config($translateProvider){
         $translateProvider.useStaticFilesLoader({
             'prefix': 'js/app/common/languages/locale-',
             'suffix': '.json'
             })
 
-        $translateProvider.preferredLanguage('en');
+        $translateProvider.preferredLanguage('es'); 
 
-    })
-    .controller('settingsController', settingsController);
-
+    }
+            
+    /* @ngInject */
     function settingsController($translate){
         var vm = this;
 
@@ -19,6 +26,8 @@ angular
         function showSelectedValue(language){
             $translate.use(language);
         }
-
     }
+})();
+
+
 
