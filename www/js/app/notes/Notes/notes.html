@@ -1,14 +1,14 @@
 <ion-view view-title="{{ 'notes.title' | translate}}">
     
     <ion-content>
-        <ion-list>
-            <ion-item class="item-remove-animate item-icon-right"  ui-sref="app.notes-edit({id:note.id})" ng-repeat="note in vm.notes">
-            <i class="icon ion-ios-arrow-right"></i>
+        <ion-list>            
+            <notes-tile list="vm.notes"></notes-tile>
+            <!--<ion-item class="item-remove-animate item-icon-right"  ui-sref="app.notes-edit({id:note.id})" ng-repeat="note in vm.notes">                                                
+                <i class="icon ion-ios-arrow-right"></i>
                 <h2>{{note.title}}</h2>
                 <p>{{note.description}}</p>
-
                 <ion-option-button class="button-assertive icon-left ion-trash-b" ng-click="vm.remove(note.id)">{{ 'notes.delete' | translate}}</ion-option-button>
-            </ion-item>
+            </ion-item>-->
         </ion-list>
       </ion-content>
 
