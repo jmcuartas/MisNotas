@@ -3,12 +3,10 @@
 
     angular
         .module('app.notes')
-        .controller('notesController', notesController);
+        .controller('NotesController', NotesController);
 
-    function notesController($scope, notesService){
-        var vm = this;
-
-        vm.remove = remove;
+    function NotesController($scope, notesService){
+        var vm = this;      
 
         $scope.$on('$ionicView.beforeEnter', function(){
             initView()
@@ -17,10 +15,5 @@
         function initView(){
             vm.notes = notesService.list();
         };
-
-        function remove(id){
-            vm.notes = notesService.remove(id);
-        }
-
     };
 })();

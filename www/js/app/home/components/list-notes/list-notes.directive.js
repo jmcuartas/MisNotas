@@ -3,14 +3,14 @@
 
     angular
         .module('app.notes')
-        .directive('listNoteDirective', listNoteDirective);
+        .directive('listNotesDirective', listNotesDirective);
 
-        function listNoteDirective(){
+        function listNotesDirective(){
             return {
                 restric: 'EA',
-                templateUrl: 'js/app/home/components/list-notes.html',
+                templateUrl: 'js/app/home/components/list-notes/list-notes.html',
                 scope: {
-                    list: '='                
+                    list: '='                                
                 },
                 controller: noteController
             }; 

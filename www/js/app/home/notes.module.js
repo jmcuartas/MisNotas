@@ -12,7 +12,7 @@
                     views: {
                         'content': {
                             templateUrl: 'js/app/home/notes/notes.html',
-                            controller: 'notesController',
+                            controller: 'NotesController',
                             controllerAs: 'vm'
                         }
                     }

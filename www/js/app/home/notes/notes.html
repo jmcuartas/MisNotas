@@ -1,11 +1,14 @@
 <ion-view view-title="{{ 'notes.title' | translate}}">
     
     <ion-content>          
-            <list-note-directive list="vm.notes"></list-note-directive>
+            <list-notes-directive list="vm.notes"></list-notes-directive>
     </ion-content>
 
-    <ion-footer-bar class="bar-asertive">
-        <a class="button button-positive icon-left ion-compose" ui-sref="app.notes-create"> {{ 'notes.create' | translate}}</a>
+    <ion-footer-bar>
+        <ion-toolbar>
+            <ion-title>{{vm.notes.length}}</ion-title>            
+            <a class="button button-positive  ion-compose" ui-sref="app.notes-create"> {{ 'notes.create' | translate}}</a>
+        </ion-toolbar>
     </ion-footer-bar>
       
 </ion-view>
