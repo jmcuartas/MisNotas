@@ -1,7 +1,7 @@
 {
     "menu.header":"Menu",
     "menu.notes":"Notas",
-    "menu.settings":"Configuracion",
+    "menu.settings":"Configuración",
     "menu.about":"Sobre",
     "setting.header":"Idioma",
     "setting.spanish":"Español",
@@ -11,8 +11,9 @@
     "notes.title":"Mis Notas",
     "notes.delete":"Eliminar",
     "notes.create":"Crear",
+    "notes.search":"Buscar",
     "note.create.title":"Nota",
     "note.create.save":"Guardar",
-    "note.create.placeTitle":"Titulo",
-    "note.create.placeDesc":"Descripcion"
+    "note.create.placeTitle":"Título",
+    "note.create.placeDesc":"Descripción"
 }

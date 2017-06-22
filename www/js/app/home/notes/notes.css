@@ -1,0 +1,10 @@
+.footerBorder{
+    border: 1px solid #eee;
+}
+
+.footerTitle{
+    color: #555;
+    font-size: 15px !important;
+	padding-right: 6px;
+	padding-left: 6px;
+}

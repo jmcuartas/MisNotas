@@ -7,7 +7,7 @@
                         {{ 'setting.header' | translate }}
                     </div>                
                     <select ng-model="language" ng-change="vm.showSelectedValue(language)">
-                        <option value="es">{{ 'setting.spanish' | translate }}</option>
+                        <option value="es" ng-selected="true">{{ 'setting.spanish' | translate }}</option>
                         <option value="en">{{ 'setting.english' | translate }}</option>
                     </select>
                 </label>
