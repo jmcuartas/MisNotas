@@ -21,10 +21,15 @@
     function settingsController($translate){
         var vm = this;
 
-        vm.showSelectedValue = showSelectedValue;
+        vm.changeLanguage = changeLanguage;
+        vm.changeLetterSize = changeLetterSize;
                 
-        function showSelectedValue(language){
+        function changeLanguage(language){
             $translate.use(language);
+        }
+
+        function changeLetterSize(size){
+            vm.fontSize = "font-size-" + size;
         }
     }
 })();

@@ -5,7 +5,7 @@
     </ion-nav-buttons>
 
     <ion-content>
-        <search-note-directive ng-model="search" ng-show="vm.show"></search-note-directive>
+        <search-note-directive list="vm.notes" clean-input="vm.show" ng-show="vm.show"></search-note-directive>
         <list-notes-directive list="vm.notes"></list-notes-directive>
     </ion-content>
 

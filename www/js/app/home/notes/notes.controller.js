@@ -9,8 +9,6 @@
         var vm = this; 
 
         vm.hiddenSearch = hiddenSearch;
-        vm.search = search; 
-
 
         $scope.$on('$ionicView.beforeEnter', function(){
             initView()
@@ -22,14 +20,13 @@
         };
 
         function hiddenSearch(){
-            if(vm.show)
+            if(vm.show) {
                 vm.show = false;
+                initView();
+            }
             else
-                vm.show = true;            
-        }
-
-        function search(){
-            
+                vm.show = true;          
+             
         };
     };
 })();

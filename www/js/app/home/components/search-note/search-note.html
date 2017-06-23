@@ -1,6 +1,6 @@
 <div class="list list-inset searchBar">
   <label class="item item-input searchBar">
     <i class="icon ion-search placeholder-icon"></i>
-    <input type="text" placeholder="{{ 'notes.search' | translate}}">
+    <input type="text" ng-model="search" ng-change="onSearchChange()" placeholder="{{ 'notes.search' | translate}}">
   </label>
 </div>
