@@ -1,15 +1,15 @@
-<ion-view view-title="{{ 'menu.settings' | translate }}">
+<ion-view view-title="{{ 'MENU-SETTINGS' | translate }}">
     <ion-content ng-class="vm.fontSize">
         <ion-list>
             
             <ion-item>
                 <label class="item item-input item-select">
                     <div class="input-label">
-                        {{ 'setting.header' | translate }}
+                        {{ 'SETTING-HEADER' | translate }}
                     </div>                
                     <select ng-model="language" ng-change="vm.changeLanguage(language)">
-                        <option value="es" ng-selected="true">{{ 'setting.spanish' | translate }}</option>
-                        <option value="en">{{ 'setting.english' | translate }}</option>
+                        <option value="es">{{ 'SETTING-SPANISH' | translate }}</option>
+                        <option value="en">{{ 'SETTING-ENGLISH' | translate }}</option>
                     </select>
                 </label>
             </ion-item>
@@ -17,12 +17,12 @@
             <ion-item>
                 <label class="item item-input item-select">
                     <div class="input-label">
-                        {{ 'setting.fontSize' | translate }}
+                        {{ 'SETTING-FONTSIZE' | translate }}
                     </div>                
                     <select ng-model="size" ng-change="vm.changeLetterSize(size)">
-                        <option value="18">{{ 'setting.big' | translate }}</option>
-                        <option value="16" ng-selected="true">{{ 'setting.med' | translate }}</option>
-                        <option value="14">{{ 'setting.small' | translate }}</option>
+                        <option value="18">{{ 'SETTING-BIG' | translate }}</option>
+                        <option value="16">{{ 'SETTING-MED' | translate }}</option>
+                        <option value="14">{{ 'SETTING-SMALL' | translate }}</option>
                     </select>
                 </label>
             </ion-item>
