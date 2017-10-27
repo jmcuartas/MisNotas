@@ -3,7 +3,7 @@
 
     var settings = angular.module('app.settings', []);
 
-    settings.config(config);    
+    settings.config(config);
     settings.controller('settingsController', settingsController);
 
     /* @ngInject */
@@ -13,10 +13,10 @@
             'suffix': '.json'
             })
 
-        $translateProvider.preferredLanguage('es'); 
+        $translateProvider.preferredLanguage('es');
 
     }
-            
+
     /* @ngInject */
     function settingsController($translate, settingsService){
         var vm = this;
@@ -25,7 +25,7 @@
 
         vm.changeLanguage = changeLanguage;
         vm.changeLetterSize = changeLetterSize;
-                
+
         function activate(){
             vm.setting = settingsService.get();
             if(vm.setting.lang !== ''){
@@ -36,7 +36,7 @@
             }
         }
 
-        function changeLanguage(language){                        
+        function changeLanguage(language){
             $translate.use(language);
             vm.setting.lang = language;
             settingsService.update(vm.setting);
@@ -49,6 +49,3 @@
         }
     }
 })();
-
-
-

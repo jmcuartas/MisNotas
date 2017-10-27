@@ -1,42 +1,40 @@
-(function(){
-    'use strict';
+(function () {
+  'use strict';
+  var core = angular.module('app.core');
+  core.config(config);
 
-    var core = angular.module('app.core');
+  /* @ngInject */
+  function config($stateProvider, $urlRouterProvider) {
+    $stateProvider
 
-    core.config(config);
+    .state('app', {
+      url: '/app',
+      abstract: true,
+      templateUrl: 'js/app/features/menu/menu.html',
+    })
 
-    /* @ngInject */
-    function config($stateProvider, $urlRouterProvider){
-        $stateProvider
-      
-      .state('app', {
-        url: '/app',
-        abstract: true,
-        templateUrl: 'js/app/features/menu/menu.html'
-      })
+    .state('app.settings', {
+      url: '/settings',
+      cache: false,
+      views: {
+        'content ': {
+          templateUrl: 'js/app/features/settings/settings.html',
+          controller: 'settingsController',
+          controllerAs: 'vm',
+        },
+      },
+    })
 
-      .state('app.settings', {
-        url: '/settings',
-        cache: false,
-        views: {
-          'content' : {
-            templateUrl: 'js/app/features/settings/settings.html',
-            controller: 'settingsController',
-            controllerAs: 'vm'
-          }
-        }
-      })
-
-      .state('app.about', {
-        url: '/about',
-        cache: false,
-        views: {
-          'content' : {
-            templateUrl: 'js/app/features/about/about.html'
-          }
-        }
-      })
+    .state('app.about', {
+      url: '/about',
+      cache: false,
+      views: {
+        'content ': {
+          templateUrl: 'js/app/features/about/about.html',
+        },
+      },
+    });
 
     $urlRouterProvider.otherwise('/app/notes');
-    }
+  }
 })();
