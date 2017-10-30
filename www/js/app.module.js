@@ -1,11 +1,8 @@
-(function(){
-    'use strict';
-
-    angular.module('app', [
-            'app.core',         
-            'app.notes', 
-            'app.settings',
-    ]);
+(function () {
+  'use strict';
+  angular.module('app', [
+    'app.core',
+    'app.notes',
+    'app.settings',
+  ]);
 })();
-
-  

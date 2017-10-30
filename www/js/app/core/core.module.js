@@ -1,9 +1,9 @@
-(function(){
-    'use strict';
+(function () {
+  'use strict';
 
-    angular.module('app.core', [
-        'ionic', 
-        'ngStorage',
-        'pascalprecht.translate'
-    ]);
+  angular.module('app.core', [
+      'ionic',
+      'ngStorage',
+      'pascalprecht.translate',
+  ]);
 })();

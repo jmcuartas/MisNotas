@@ -1,10 +1,10 @@
-(function(){
-    'use strict';
+(function () {
+  'use strict';
 
-    var menu =  angular.module('app.menu', [])
-        .controller('menuController', menuController);
+  var menu =  angular.module('app.menu', [])
+    .controller('menuController', menuController);
 
-        function menuController(settingsService){
+  function menuController(settingsService) {
 
-        }
+  }
 })();

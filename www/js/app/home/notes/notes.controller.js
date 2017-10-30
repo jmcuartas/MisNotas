@@ -1,32 +1,31 @@
-(function(){
-    'use strict';
+(function () {
+  'use strict';
 
-    angular
-        .module('app.notes')
-        .controller('NotesController', NotesController);
+  angular
+    .module('app.notes')
+    .controller('NotesController', NotesController);
 
-    function NotesController($scope, notesService){
-        var vm = this; 
+  function NotesController($scope, notesService) {
+    var vm = this;
 
-        vm.hiddenSearch = hiddenSearch;
+    vm.hiddenSearch = hiddenSearch;
 
-        $scope.$on('$ionicView.beforeEnter', function(){
-            initView()
-        });
+    $scope.$on('$ionicView.beforeEnter', function () {
+      initView();
+    });
 
-        function initView(){
-            vm.notes = notesService.list();  
-            vm.show = false;      
-        };
+    function initView() {
+      vm.notes = notesService.list();
+      vm.show = false;
+    }
 
-        function hiddenSearch(){
-            if(vm.show) {
-                vm.show = false;
-                initView();
-            }
-            else
-                vm.show = true;          
-             
-        };
-    };
+    function hiddenSearch() {
+      if (vm.show) {
+        vm.show = false;
+        initView();
+      } else {
+        vm.show = true;
+      }
+    }
+  }
 })();

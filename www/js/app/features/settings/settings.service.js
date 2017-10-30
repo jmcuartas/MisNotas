@@ -1,50 +1,52 @@
-(function(){
-    'use strict';
+(function () {
+  'use strict';
 
-    angular 
-        .module('app.settings')
-        .factory('settingsService', settingsService);
+  angular
+    .module('app.settings')
+    .factory('settingsService', settingsService);
 
-        function settingsService($localStorage){
+  function settingsService($localStorage) {
 
-            initSettings();
+    initSettings();
 
-            var service = {
-                get: get,
-                create: create,
-                update: update
-            };
+    var service = {
+        get: get,
+        create: create,
+        update: update,
+      };
 
-            return service;
+    return service;
 
-            function initSettings(){
-                if(angular.isUndefined($localStorage.settings)){
-                    $localStorage.settings = {id: 'UserConf', lang: '', fontS: ''};
-                }
-            }
+    function initSettings() {
+      if (angular.isUndefined($localStorage.settings)) {
+        $localStorage.settings = { id: 'UserConf', lang: '', fontS: '' };
+      }
+    }
 
-            function get(){
-                if($localStorage.settings.length === 0){
-                    var setting = {id: 'UserConf', lang: '', fontS: ''};
-                    create(setting);
-                    return setting;
-                }                
-                return $localStorage.settings[0];
-            }
+    function get() {
+      if ($localStorage.settings.length === 0) {
+        var setting = { id: 'UserConf', lang: '', fontS: '' };
+        create(setting);
+        return setting;
+      }
 
-            function create(setting){
-                if($localStorage.settings.length === 0){
-                    $localStorage.settings.push(setting);
-                }                
-            }
+      return $localStorage.settings[0];
+    }
 
-            function update(setting){
-                $localStorage.settings = $localStorage.settings.map(function (settingToUpdate){
-                    if(setting.id === settingToUpdate.id){
-                        return setting;
-                    }
-                    return settingToUpdate;
-                });
-            }
+    function create(setting) {
+      if ($localStorage.settings.length === 0) {
+        $localStorage.settings.push(setting);
+      }
+    }
+
+    function update(setting) {
+      $localStorage.settings = $localStorage.settings.map(function (settingToUpdate) {
+        if (setting.id === settingToUpdate.id) {
+          return setting;
         }
+
+        return settingToUpdate;
+      });
+    }
+  }
 })();
