@@ -10,7 +10,7 @@
         url: '/notes',
         cache: false,
         views: {
-          'content': {
+          content: {
             templateUrl: 'js/app/home/notes/notes.html',
             controller: 'NotesController',
             controllerAs: 'vm',
@@ -22,7 +22,7 @@
         url: '/notes-edit/:id',
         cache: false,
         views: {
-            'content': {
+            content: {
               templateUrl: 'js/app/home/notes-edit/notes-edit.html',
               controller: 'NotesEditController',
               controllerAs: 'vm',
@@ -34,7 +34,7 @@
         url: '/notes-create',
         cache: false,
         views: {
-          'content': {
+          content: {
             templateUrl: 'js/app/home/notes-create/notes-create.html',
             controller: 'NotesCreateController',
             controllerAs: 'vm',
