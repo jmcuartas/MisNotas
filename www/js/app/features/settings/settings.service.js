@@ -30,7 +30,7 @@
         return setting;
       }
 
-      return $localStorage.settings[0];
+      return $localStorage.settings;
     }
 
     function create(setting) {
