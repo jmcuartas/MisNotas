@@ -40,13 +40,7 @@
     }
 
     function update(setting) {
-      $localStorage.settings = $localStorage.settings.map(function (settingToUpdate) {
-        if (setting.id === settingToUpdate.id) {
-          return setting;
-        }
-
-        return settingToUpdate;
-      });
+      return $localStorage.settings = setting;
     }
   }
 })();

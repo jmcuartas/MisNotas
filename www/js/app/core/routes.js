@@ -17,7 +17,7 @@
       url: '/settings',
       cache: false,
       views: {
-        'content ': {
+        content: {
           templateUrl: 'js/app/features/settings/settings.html',
           controller: 'settingsController',
           controllerAs: 'vm',
@@ -29,7 +29,7 @@
       url: '/about',
       cache: false,
       views: {
-        'content ': {
+        content: {
           templateUrl: 'js/app/features/about/about.html',
         },
       },
