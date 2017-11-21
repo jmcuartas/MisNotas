@@ -31,6 +31,8 @@
       views: {
         content: {
           templateUrl: 'js/app/features/about/about.html',
+          controller: 'aboutController',
+          controllerAs: 'vm'
         },
       },
     });
