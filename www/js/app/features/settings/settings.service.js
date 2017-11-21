@@ -30,7 +30,7 @@
         return setting;
       }
 
-      return $localStorage.settings[0];
+      return $localStorage.settings;
     }
 
     function create(setting) {
@@ -40,13 +40,7 @@
     }
 
     function update(setting) {
-      $localStorage.settings = $localStorage.settings.map(function (settingToUpdate) {
-        if (setting.id === settingToUpdate.id) {
-          return setting;
-        }
-
-        return settingToUpdate;
-      });
+      return $localStorage.settings = setting;
     }
   }
 })();
