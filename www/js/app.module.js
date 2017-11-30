@@ -4,5 +4,6 @@
     'app.core',
     'app.notes',
     'app.settings',
+    'app.about'
   ]);
 })();

@@ -5,7 +5,7 @@
     .module('app.notes')
     .controller('NotesController', NotesController);
 
-  function NotesController($scope, notesService) {
+  function NotesController($scope, notesService, settingsService) {
     var vm = this;
 
     vm.hiddenSearch = hiddenSearch;
@@ -17,6 +17,7 @@
     function initView() {
       vm.notes = notesService.list();
       vm.show = false;
+      vm.fontSize = settingsService.getFontSize();
     }
 
     function hiddenSearch() {

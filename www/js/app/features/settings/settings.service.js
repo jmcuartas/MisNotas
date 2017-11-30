@@ -13,6 +13,7 @@
         get: get,
         create: create,
         update: update,
+        getFontSize: getFontSize
       };
 
     return service;
@@ -41,6 +42,14 @@
 
     function update(setting) {
       return $localStorage.settings = setting;
+    }
+
+    function getFontSize() {
+      if (get().fontS) {
+        return 'font-size-' + get().fontS;
+      }
+
+      return 16;
     }
   }
 })();
