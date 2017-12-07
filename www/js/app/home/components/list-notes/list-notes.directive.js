@@ -17,9 +17,17 @@
 
     function noteController($scope, notesService) {
       $scope.remove = remove;
+      $scope.getDate = getDate;
 
       function remove(id) {
         $scope.list = notesService.remove(id);
+      }
+
+      function getDate(date) {
+        if (new Date(date).toDateString() < new Date().toDateString()) {
+          return new Date(date).toLocaleDateString();
+        }
+        return new Date(date).toLocaleTimeString();
       }
     }
   }

@@ -2,7 +2,7 @@
   <ion-item class="item-remove-animate item-icon-right"  ui-sref="app.notes-edit({id:note.id})" ng-repeat="note in list">
     <i class="icon ion-ios-arrow-right"></i>
     <h2>{{note.title}}</h2>
-    <p>{{note.description}}</p>
+    <p>{{getDate(note.date)}} {{note.description}}</p>
     <ion-option-button class="button-assertive icon-left ion-trash-b" ng-click="remove(note.id)">{{ 'notes-delete' | translate}}</ion-option-button>
   </ion-item>
 </ion-list>

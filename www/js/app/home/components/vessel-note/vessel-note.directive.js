@@ -15,7 +15,7 @@
       controller: noteController,
     };
 
-    function noteController($scope, $state, notesService) {
+    function noteController($scope, $state, notesService, guidService) {
       activate();
 
       $scope.save = save;
@@ -23,7 +23,7 @@
       function activate() {
         var id = $state.params.id;
         if (angular.isUndefined(id))
-          $scope.nota = { id: new Date().getTime().toString(), title: '', description: '' };
+          $scope.nota = { id: guidService.getGUID(), date: new Date().toJSON(), title: '', description: '' };
         else
           $scope.nota = angular.copy(notesService.get(id));
       }
