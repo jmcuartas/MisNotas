@@ -4,6 +4,7 @@
   angular.module('app.core', [
       'ionic',
       'ngStorage',
-      'pascalprecht.translate',
+      'ngCordova',
+      'pascalprecht.translate'
   ]);
 })();
